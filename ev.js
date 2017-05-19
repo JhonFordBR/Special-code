@@ -30,8 +30,14 @@ if(req.url=='/'){
 
   )
 }else{
-  res.end(`UNKNOWN`)
+  console.log('HA');
 
 }
 
+
+
+
 }).listen(8080,()=>console.log('Started our server'));
+server.on('connection',socket  => {
+  console.log('Someone connected',socket);
+})
