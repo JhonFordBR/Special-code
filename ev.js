@@ -13,14 +13,15 @@ const interval = setInterval(function(){
 
 //});
 const server = require('http').createServer((req,res)=>{
+const p = require('./ports');
 
 if(req.url=='/'){
   res.setHeader('content-type','text/html');
   res.end(
     `<!Doctype html>
     <body>
-    <h1>WATAFAK===error</h1>
-    <p>watafak</p>
+    <h1>${p.upper(__dirname)}</h1>
+    <p>Hovo</p>
     </body>`
 
 
