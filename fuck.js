@@ -4,7 +4,7 @@ const  sock = new net.Socket;
 const funct =  (dataz) => {
   const head = dataz.split('\r\n\r\n');
 const vzgo = head[0].split('\r\n');
-const smth = {header :  vzgo[0],
+const smth = {header :  vzgo,
   bdy: head[1]
 }
 console.log(smth);
