@@ -2,15 +2,17 @@
 const net = require('net');
 const  sock = new net.Socket;
 const funct =  (dataz) => {
-  const head = dataz.split('\r\n\r\n');
-const vzgo = head[0].split('\r\n');
-const smth = {header :  vzgo,
-  bdy: head[1]
-}
-console.log(smth);
+const head = dataz.split('\r\n\r\n');
+
+const smth = {
+  header :  head[0].split('\r\n'),
+    body  : head[1]
+}//smth finish
 
 
-  }
+
+  }//funct finish
+  
 sock.on('connect',() => {
   sock.write('GET /en/ HTTP/1.1 \r\n');
   sock.write('HOST :istc.am');
